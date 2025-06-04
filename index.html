@@ -246,92 +246,48 @@
             transform: scale(1.05);
         }
 
-        /* Contact Form */
-        /*
-        .contact-form {
-            display: grid;
-            gap: 1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            color: #a8edea;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #a8edea;
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .submit-btn {
-            padding: 1rem 2rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        */
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.2);
-            color: white;
-            backdrop-filter: blur(20px);
-        }
-
-        .social-links {
+        /* Contact Section */
+        .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
         }
 
-        .social-links a:hover {
-            color: #a8edea;
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .contact-item span {
+            font-weight: 500;
+            font-size: 1rem;
         }
 
         /* Mobile Responsive */
@@ -346,6 +302,17 @@
             
             .section-glass {
                 padding: 2rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            .contact-item {
+                min-width: 200px;
+                justify-content: center;
             }
         }
 
@@ -372,7 +339,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <!-- <li><a href="#contact">Contact</a></li> -->
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -418,7 +385,7 @@
         </div>
     </section>
 
-    <section id="skills and tools">
+    <section id="skills">
         <div class="section-glass">
             <h2>Skills and Tools</h2>
             <div class="skills-container">
@@ -448,41 +415,28 @@
         </div>
     </section>
 
-    <!-- <section id="contact">
+    <section id="contact">
         <div class="section-glass">
-            <h2>Get In Touch</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Ask me about anything..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+            <h2>Let's Connect</h2>
+            <p style="font-size: 1.1rem; text-align: center; margin-bottom: 2rem; color: rgba(255, 255, 255, 0.9);">
+                I'm always open to discussing new opportunities and interesting projects
+            </p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/johntnjlu/" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/johntnjlu" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:johntnjlu@gmail.com" class="contact-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email">
+                    <span>Email</span>
+                </a>
+            </div>
         </div>
-    </section> -->
-
-
-    <footer>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="20" height="20">
-            </a>
-            <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" title="GitHub">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="20" height="20">
-            </a>
-            <a href="mailto:johntnjlu@gmail.com" title="Email">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" width="20" height="20">
-            </a>
-        </div>
-    </footer>
+    </section>
 
     <script>
         // Animated background particles
@@ -536,34 +490,6 @@
             });
         }
 
-        // Form submission
-        /*
-        function initContactForm() {
-            const form = document.querySelector('.contact-form');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const submitBtn = form.querySelector('.submit-btn');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    submitBtn.textContent = 'Message Sent! ✓';
-                    submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
-                    
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
-                        form.reset();
-                    }, 2000);
-                }, 1000);
-            });
-        }
-        */
-
         // Card hover effects
         function initCardEffects() {
             const cards = document.querySelectorAll('.card');
@@ -583,7 +509,6 @@
             createParticles();
             initSmoothScroll();
             initHeaderScroll();
-            // initContactForm();
             initCardEffects();
             
             window.addEventListener('scroll', updateScrollProgress);
