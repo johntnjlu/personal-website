@@ -8,4 +8,5 @@
             <a href="#" title="Dribbble">🎨</a>
         </div>
 
-        can you make this more professional by only including linkedin and github with either small logos or just text
+        - can you make this more professional by only including linkedin and github with either small logos or just text
+        - can you add an email with an icon as well like previously
