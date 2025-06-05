@@ -1,4 +1,10 @@
 # personal-website
+    links:
+    https://johntnjlu.us
+    or
+    https://www.johntnjlu.us
+
+
     ai prompts for web facing component:
         - can I get a project template for a static, modern looking personal website?
         - <div class="social-links">
